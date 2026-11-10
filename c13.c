@@ -1,17 +1,36 @@
-// Write a c program to calculate marks of student
+//C program to calculate the multipilication of two matrix
+
+// Addition of two matrices
 #include <stdio.h>
-int main()
+void main()
 {
-    int a,b,c,d,e,sum;
-    float avg;
-    printf("Enter Your marks of subjects :");
-    scanf("%d ",&a);
-    scanf("%d ",&b);
-    scanf("%d ",&c);
-    scanf("%d ",&d);
-    scanf("%d ",&e);
-    sum = a+b+c+d+e;
-    avg=sum/5.0;
-    printf("AVG = %.1f" , avg);
-    return 0;
+    int a[2][2], b[2][2],mul[2][2],i,j;
+    printf("Enter four values of matrix A - ");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++)
+            scanf("%d",&a[i][j]);
+    }
+    printf("Enter four values of B matrix - ");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++)
+            scanf("%d",&b[i][j]);
+    }
+for(i=0;i<2;i++){
+    for(j=0;j<2;j++)
+        mul[i][j] = a[i][j]*b[i][j];
+            printf("%d\t",mul[i][j]);
+        printf("\n");
+    }
+
+    printf("Multiplication of matrices -\n ");
+
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+            printf("%d\t",mul[i][j]);
+        printf("\n");
+
+    }
 }
+
+
